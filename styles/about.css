@@ -1,0 +1,85 @@
+.about {
+    background-image: url('../photo/bg4.jpg');
+    padding: 100px 20px;
+    min-height: calc(85vh); /* Default height */
+    position: relative;
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Ensure no content overflows */
+    z-index: 0; /* Ensure .about is the base layer */
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit; /* Use the same background as the parent */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Ensure it's behind the content */
+}
+
+.about h2,
+.about p,
+.about a {
+    position: relative; /* Ensure they appear above the blurred background */
+    z-index: 1;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add some text shadow for readability */
+}
+
+.about h2 {
+    font-size: 2.5rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.aboutcont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-gif {
+    margin-top: 20px; /* Add some space between the paragraph and the GIF */
+    width: 100%; /* Make the GIF responsive */
+    max-width: 500px; 
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the GIF */
+    padding-right: 50px;
+}
+
+@media (max-width: 1000px) {
+    .aboutcont {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .about-gif {
+        padding-right: 0; 
+        margin-top: 20px; 
+        max-width: 500px; 
+    }
+}
+
+@media (max-width: 500px) {
+    .about-gif { 
+        max-width: 100%; 
+    }
+}
+
+
+

@@ -1,0 +1,133 @@
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    padding: 20px;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    width:100%;
+}
+
+nav .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Background images*/
+.hero {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    filter: blur(50px); /* Apply blur effect */
+}
+
+/* Specific Section Backgrounds */
+.hero {
+    background-image: url('./photo/bg2.jpg');
+    height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero::before {
+    background-image: url('./photo/bg2.jpg');
+}
+
+/* Text Styling for readability */
+.hero h2 {
+    font-size: 3rem;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: rgba(83, 83, 83, 0.8);
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Position text */
+.hero h2, .hero p, .hero .btn{
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
